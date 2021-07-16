@@ -19,7 +19,7 @@ label {
 legend {
     font-weight: bold;
     font-size: 1.5em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 
 h2 {
@@ -28,10 +28,15 @@ h2 {
 
 header {
     padding: 20px;
-    background-color: rgb(43, 44, 63);
-    color: white;
+    background-color: #5F939A;
+    color: rgb(43, 44, 63);
     text-align: center;
     text-transform: uppercase;
+}
+
+#zip {
+    margin-bottom: 40px;
+    width: 50%;
 }
 
 .container-newsletter {
@@ -60,7 +65,64 @@ fieldset {
 .contact input,
 .contact select {
     width: 100%;
+    font-size: 1.3em;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #EDFFEC;
+}
+
+.contact label {
+    display: block;
+    margin-top: 1.2em;
+    margin-bottom: .5em;
+}
+
+.newsletter legend {
+    padding: 1em 0 .5em;
+    width: 100%;
+    border-top: 3px solid;
+}
+
+.newsletter p {
+    padding: 1.4em 0 .8em;
+    font-size: 1.1em;
+}
+
+.newsletter label {
+    padding-left: .8em;
+}
+.newsletter label:last-of-type {
+    display: block;
+    margin: 1.4em 0 .8em;
+    padding: 5px 0 5px;
+}
+
+.newsletter textarea {
+    font-size: 1.3em;
+    width: 100%;
+    height: 5em;
+    border-radius: 5px;
+    background-color: #EDFFEC;
+}
+
+button {
+    padding: 15px 0;
+    margin: 25px 0 10px;
+    background-color: #5F939A;
+    color: rgb(43, 44, 63);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100%;
     font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 10px 0 20px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
 }
 
 input,
@@ -72,4 +134,30 @@ textarea {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
+    margin: .7em 0;
+    color: #EDFFEC;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact input, 
+    .contact select {
+        flex: 80%;
+        margin: 10px 0 10px;
+    }
+    .contact label {
+        flex: 20%;
+    }
+    .contact input:last-of-type {
+        max-width: 25%;
+    }
+    .contact label:last-of-type  {
+        max-width: 20%;
+    }
 }

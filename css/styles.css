@@ -154,6 +154,8 @@ input[type=radio] {
     .contact label {
         flex: 20%;
     }
+    
+    /* this took me almost 2 hours to figure out */
     .contact input:last-of-type {
         max-width: 25%;
     }

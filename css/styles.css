@@ -149,8 +149,10 @@ textarea {
 
 input:focus,
 select:focus,
-textarea:focus {
-    border: 5px solid #5F939A;
+textarea:focus,
+button:focus {
+    box-shadow: 0 8px 8px -1px #5F939A;
+    /* border-bottom: solid 3px #5F939A; */
     transition: .3s;
 }
 

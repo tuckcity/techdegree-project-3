@@ -11,6 +11,11 @@ body {
     color: rgb(43, 44, 63);
 }
 
+main {
+    max-width: 500px;
+    margin: auto;
+}
+
 p,
 label {
     font-weight: 300;
@@ -77,6 +82,16 @@ fieldset {
     margin-bottom: .5em;
 }
 
+::placeholder {
+    display: block;
+    padding-right: 1em;
+    text-align: right;
+    font-size: .8em;
+    font-weight: 300;
+    font-style: italic;
+
+}
+
 .newsletter legend {
     padding: 1em 0 .5em;
     width: 100%;
@@ -129,6 +144,14 @@ input,
 select,
 textarea {
     display: block;
+    border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 5px solid #5F939A;
+    transition: .3s;
 }
 
 input[type=checkbox],
@@ -142,6 +165,13 @@ input[type=radio] {
 /* Media Queries */
 
 @media (min-width: 768px) {
+    /* main {
+        max-width: 70%;
+        width: auto;
+        text-align: center;
+    } */
+
+
     .contact {
         display: flex;
         flex-wrap: wrap;
@@ -154,7 +184,7 @@ input[type=radio] {
     .contact label {
         flex: 20%;
     }
-    
+
     /* this took me almost 2 hours to figure out */
     .contact input:last-of-type {
         max-width: 25%;
@@ -162,4 +192,5 @@ input[type=radio] {
     .contact label:last-of-type  {
         max-width: 20%;
     }
+
 }
